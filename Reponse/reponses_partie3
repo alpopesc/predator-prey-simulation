@@ -1,0 +1,69 @@
+Q 3.1
+Nous avons déclarer les méthodes getStandardMaxSpeed, getMass,
+getRandomWalkRadius, getRandomWalkDistance, getRandomWalkJitter, 
+getViewRange et getViewDistance comme virtuelles pures. En effet chaque animal 
+aura des masses, vitesses max, etc différentes. Cela fait donc sens de laisser
+à chaque animal la tâche de définir sa propre vitesse max, masse, etc.
+Nous avons écrit override à la fin des prototypes de ces méthodes redéfinies
+dans Scorpion et Gerbil.
+
+Q 3.2
+Dans appPPS.json il faut modifier dans simulation -> animal -> gerbil
+ -> energy -> initial
+
+Q 3.3
+Environment est une sous-classe de Updatable et OrganicEntity (et toutes ses sous-classes) 
+est une sous-classe de Updatable et Drawable.
+
+Q 3.4
+
+
+Q 3.5
+il faut placer les informations de debugging au niveau de CircularCollider
+Maintenant que CircularCollider est dessinable c'est une sous-classe de
+Drawable et donc toutes ses sous-classes aussi.
+
+Q 3.6
+Nous avons défini une méthode virtuelle pure "getLongevity" dans OrganicEntity
+que les classes Gerbil et Scorpion (et Food) redéfinissent avec leur longévité par
+défaut. On pourrait donc facilement changer ce que retourne ces fonctions
+pour leur donner des longévités spécifiques.
+
+Q 3.7
+Pour qu'une entité morte disparaisse del'environnement ont désalloue sa 
+mémoire et on met son pointeur à nullptr.
+
+Q 3.8 
+double vitesseMax_tmp = getStandardMaxSpeed();
+	           
+	           //seuil de fatigue
+	if(energy < 30.0){
+		vitesseMax_tmp = getStandardMaxSpeed() * 0.2;
+	}
+Nous avons ajouté un test avant le switch qui réduit la vitesse max 
+de base si l'énergie du scorpion/gerbille est en dessous d'un seuil.
+Par contre le seuil est en "brut" dans notre code.. faudrait-il l'ajouter
+en attribut static dans la classe Animal?
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

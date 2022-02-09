@@ -1,0 +1,49 @@
+Q 2.1
+Aucune méthodes n'est const car elles modifient toute quelque chose.
+Elles ajoutent, enlèvent, dessinent ou font évoluer les attributs.
+
+Q 2.2
+On ajoute la ligne "Environment(Environment const&) = delete;" dans le
+prototype de la classe pour rendre la copie d'une instance d'Environment 
+illicte.
+
+Q 2.3
+Lorsque la durée de vie d'une instance d'Environment se termine, il faut
+que la classe Environment désalloue la mémoire allouée dynamiquement
+pointée par les pointeurs sur animaux. 
+Il faut donc prévoir un destructeur qui fera un delete pour tous les
+pointeurs dans le tableau 'faune'.
+
+Q 2.4
+l'utilisation de ces touches est définie dans Application.cpp
+
+Q 2.5
+Pour la force la methode force-attrac() retourne un Vec2d (direction et norme de force) et prend en rien du tout en pararmètre.
+Pour le mis à jour du deplacement la methode maj_deplacement() retourne rien et prend le temps est et une force qui a été calculé avant par force_attrac() et de type Vec2d en paramètre.
+
+Q 2.6
+On fait un enum Deceleration avec les options faible, moyen et fort.
+Apres on pourrait ajouter un attribut dans la classe qui est de type Deceleration et faire une methode set_Deceleration(qui) qui peut changer la deceleration de faible a forte etc.
+On a pas implementé ca dans notre programme.
+
+Q 2.7
+The return of pointers on organic entities allows one to use the function getEntitiesInSightForAnimal to get access to some organic entities and even get the right to change them or to delete them. 
+Therefore this is not very good for the encapsulation.
+
+Q 2.8
+il faut compléter la méthode draw de la classe environnement pour qu'elle
+dessine aussi la faune(ensemble d'animaux)
+
+Q 2.9
+
+
+Q 2.10
+La méthode retourne un ensemble de cible qui plus tard seront des animaux
+ou des food. Pour utiliser plus tard une solution polymorphique il faut 
+que la méthode retourne des pointeurs sur des cibles.
+Nous avons redéfini ce type:
+typedef std::list<OrganicEntity*> Ret_entities;
+note: cette ligne est extraite de la version de Environment.hpp de la
+partie 3.
+
+Q 2.11

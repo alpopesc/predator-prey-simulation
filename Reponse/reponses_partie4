@@ -1,0 +1,8 @@
+Q4.1
+Une onde est un circular collider donc la classe Wave herite de la classe
+CircularCollider.
+
+Q4.2
+La méthode updateWave
+
+Q4.3

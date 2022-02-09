@@ -1,0 +1,33 @@
+[Q1.1]
+Il faudrait en faire une méthode de la classe CircularCollider car ce sont
+ces objets qui bougent dans l'environnement et pourraient en sortir. 
+
+[Q1.2]
+???
+
+[Question Q1.3]
+On peut utiliser 2 boucles for qui itèrent sur les 2 compenets du vecteur qu'on veut additiner a to.
+
+
+[Question Q1.4]
+l'objet de type CircularCollider est une classe entier et du coup occupe beaucoup d'espace de memoire: Du coup on passe tous les argument de type CircularCollider par reference constante.
+
+
+[Question Q1.5]
+On peut rajouter le const a chaque methode sauf au move 	(?????? Not sure regarder le MOOC)
+Parceque on modifie pas les attribut de l'instance. Dans
+Move en change ou acualise la position.
+
+[Q1.6]
+On utilise les méthodes isColliding, isCircularColliderInside
+
+[Q1.7]
+On choisit une surcharge interne car on les défini spécifiquement pour 
+des CircularCollider (l'instance courante est une opérande), donc pour une classe.
+
+[Q1.8] 
+les CircularCollider car ce sont de gros objets
+
+[Q1.9]
+Toutes les méthodes "getters" et celles retournant un bool car elles
+ne modifient pas les attributs de l'instance courante.
